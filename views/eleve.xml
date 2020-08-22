@@ -1,0 +1,125 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="employe_view">
+            <field name="name">eleve.form</field>
+            <field name="model">hr.employee</field>
+            <field name="inherit_id" ref="hr.view_employee_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='job_id']" position="after">
+                    <field name="classe_id"/>
+                </xpath>
+                <xpath expr="//field[@name='job_id']" position="replace">
+                    <field name="section_id"/>
+                </xpath>
+
+
+                <xpath expr="//field[@name='category_ids']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='bank_account_id']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='spouse_complete_name']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='spouse_birthdate']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='parent_id']" position="replace"></xpath>
+
+                <xpath expr="//field[@name='job_title']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='work_location']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='work_phone']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='work_email']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='contracts_count']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='phone']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='km_home_work']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='marital']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='children']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='visa_no']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='permit_no']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='emergency_phone']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='visa_expire']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='private_email']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='study_field']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='study_school']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='emergency_contact']" position="replace"></xpath >
+
+                <xpath expr="//field[@name='certificate']" position="replace"></xpath >
+
+                
+
+                <xpath expr="//field[@name='department_id']" position="replace"></xpath >
+                <xpath expr="//field[@name='mobile_phone']" position="replace">
+                    <div>
+                        <span>
+                            <field name="mobile_phone" placeholder="Numero de téléphone" />
+                        </span>
+                        <br/>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='mobile_phone']" position="after">
+                    <div>
+                        <span>
+                            <field name="work_email" placeholder="Adresse email" />
+                        </span>
+                    </div>
+                </xpath>
+                <xpath expr="//field[@name='name']" position="replace">
+
+                    <div class="oe_title">
+
+                        <h1>
+
+                            <field name="name" placeholder="Nom complet de l'eleve" required="True"/>
+
+                        </h1>
+
+                    </div>
+
+                </xpath>
+                <xpath expr="//field[@name='address_home_id']" position="replace">
+                    <div>
+                        <span>  Adresse: <field name="address_home_id" placeholder="choisissez l'adresse" />
+                        </span>
+                    </div>
+                </xpath >
+                <xpath expr="//field[@name='address_home_id']" position="after">
+                    <div>
+                        <span> Etat civil: <field name="marital" placeholder="" />
+                        </span>
+                    </div>
+                </xpath >
+                <xpath expr="//field[@name='marital']" position="after">
+                    <div>
+                        <span> Contact d'urgence: <field name="emergency_contact" placeholder="" />
+                        </span>
+                    </div>
+                </xpath >
+                <xpath expr="//field[@name='emergency_contact']" position="after">
+                    <div>
+                        <span>
+       Niveau d'etude: <field name="certificate" placeholder="Contact d'urgence" />
+                        </span>
+                    </div>
+                </xpath >
+                <xpath expr="//field[@name='country_id']" position="attributes">
+                    <attribute name="string">Nationnalité</attribute>
+                </xpath>
+                   
+            </field>
+        </record>
+    </data>
+</odoo>
